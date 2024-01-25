@@ -28,24 +28,24 @@ Convert PDF to structured formats with deep-learning-assisted Layout Analysis an
 - Explanation:
   - PDF files have various kinds of elements (pictures & equations), and complicated layouts (multiple columns & mixed orders)
 - How to do:
-  - Layout analysis
-  - Datasets:
-    - PubLayNet
-    - CDLA: Chinese texts, and more labels (equation and caption)
-  - Text Object Detection:
-    - DBNet
-    - CnSTD
-    - DiT by MicroSoft: Slow, and a little bit hard to setup env, but really good
-    - LayoutLM series by MicroSoft: Better than DiT, but slower and more complicated
-  - Post-processing:
-    - After detection, it would be necessary to take some more efforts on organizing and grouping the detected document elements
-    - For example: figures containing texts or tables, long table containing texts or figures, equation in texts
-    - In above example cases, same document element might be detected as different text types, and developers must take care of these.
+  - Layout analysis:
+    - Datasets
+      - PubLayNet
+      - CDLA: Chinese texts, and more labels (equation and caption)
+    - Text Object Detection
+      - DBNet
+      - CnSTD
+      - DiT by MicroSoft: Slow, and a little bit hard to setup env, but really good
+      - LayoutLM series by MicroSoft: Better than DiT, but slower and more complicated
+    - Post-processing
+      - After detection, it would be necessary to take some more efforts on organizing and grouping the detected document elements
+      - For example: figures containing texts or tables, long table containing texts or figures, equation in texts
+      - In above example cases, same document element might be detected as different text types, and developers must take care of these.
   - Text Recognition:
     - PureText
       - PaddleOCR
       - CnOCR 
-      - I know someone would mention tesseract, but if anytone really have used it for a long time and have seen various bad cases, he would no longer mention it.
+      - I know someone would mention tesseract, but if anytone has ever used and finetuned it for a long time and has seen various bad results, he would no longer consider using it.
     - Equation
       - LaTeX-OCR
     - Table
