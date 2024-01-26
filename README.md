@@ -20,7 +20,7 @@ Convert PDF to structured formats with deep-learning-assisted Layout Analysis an
   - PDF file is essentially bytes stream, which contains info of glyphs and positions
 - How to do:
   - Extract contents as texts or dicts from PDF, then organize and group them
-  - Really fast, but ugly. I prefer more general and elegant solutions. See method 2.
+  - Really fast, but ugly. I prefer more general and elegant methods. See method 2.
 - Recommended Packages:
     - PyMuPDF
 
@@ -35,25 +35,25 @@ Convert PDF to structured formats with deep-learning-assisted Layout Analysis an
     - Text Object Detection
       - DBNet
       - CnSTD
-      - DiT by MicroSoft: Slow, and a little bit hard to setup env, but really good
-      - LayoutLM series by MicroSoft: Better than DiT, but slower and more complicated
+      - DiT: Slow, and env setup is a headache, but really good
+      - LayoutLM series: Better than DiT, but slower and more complicated
     - Post-processing
       - After detection, it would be necessary to take some more efforts on organizing and grouping the detected document elements
-      - For example: figures containing texts or tables, long table containing texts or figures, equation in texts
+      - For example: figures containing texts or tables, long table containing texts or figures, texts containg equations
       - In above example cases, same document element might be detected as different text types, and developers must take care of these.
   - Text Recognition:
-    - PureText
+    - Pure Text
       - PaddleOCR
       - CnOCR 
-      - I know someone would mention tesseract, but if anytone has ever used and finetuned it for a long time and has seen various bad results, he would no longer consider using it.
+      - I guess someone would mention tesseract, but if anytone has ever used and finetuned it for a long time and has seen various bad results, he would no longer consider using it.
     - Equation
       - LaTeX-OCR
     - Table
       - Deepdoctection
-      - table-transformer by MicroSoft
-      - No solution I have to now can work well for all cases, as real-world tables are much more complicated than people's might have expected
+      - table-transformer
+      - No solution as far as I have tested can work perfectly for all cases, as real-world tables are much more complicated than what people might have expected
   - Page-level Understanding with Vision-based Large-Language Models:
-    - This is another very long story … But I would write it someday.
+    - This is another very long story … Let me write it someday in the future.
 - Related work
   - Nougat by Meta
     - Results for English papers are great.
